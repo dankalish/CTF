@@ -1,0 +1,8 @@
+# Secnotes
+
+A Windows machine that uses ****\_\_****
+
+### Steps
+
+Scan the machine for open ports
+`nmap --open -p- -oA nmap/open <IP>`

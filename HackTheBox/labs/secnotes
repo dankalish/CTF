@@ -1,0 +1,43 @@
+# Secnotes
+
+A Windows machine that uses \***\*\_\_\*\***
+
+### Steps
+
+Scan the machine for open ports
+`nmap --open -p- -oA nmap/open <IP>`
+
+Find ports 80, 445, and 8808 are open
+
+#### Scan the open ports
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+Go to the website on port 80
+`http://10.129.244.217/login.php`
+
+#### Check for valid usernames using wfuzz
+
+- find the username "tyler"
+
+```
+wfuzz -c -w /usr/share/wordlists/seclists/Usernames/Names/names.txt -d "username=FUZZ&password=password" --hs "No account found with that username." -u http://10.129.244.217/login.php
+```
+
+![alt text](image-3.png)
+
+#### Create a new user and Login
+
+Clicking around, you find the change password API on the page does not include verifying your old password, so that could be exploited later.
+
+- If the request is changed from a POST to a GET, you can change the password.
+  ![alt text](image-4.png)
+
+#### Create a note and add \<center\> tags to the content of the pages
+
+![alt text](image-5.png)
+
+#### Notes and their content are centered. HTML is not sanitized at all, so website is vulnerable to XSS
+
+![alt text](image-6.png)
