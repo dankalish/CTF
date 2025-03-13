@@ -9,7 +9,7 @@ Practice writeups while preparing for the OSCP exam.
 | Name       | Date      | Used Hints | Machine Type     | Skills Learned and Used                                                              | Order Written Up                                             |
 | ---------- | --------- | ---------- | ---------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
 | Sea        | 2/15/25   | Yes        | Linux            | Script uploading vuln, Apache web exploits, breaking hashes, Log Poisoning/Injection |                                                              |
-| Nibbles    | 2/16/2025 | Yes        | Linux            | Try passwords using the running program\'s name, Hydra brute forcing, `sudo -l`      |                                                              |
+| Nibbles    | 2/16/2025 | Yes        | Linux            | Try passwords using the running program's name, Hydra brute forcing, `sudo -l`       |                                                              |
 | SolidState | 2/17/25   | Yes        | Linux            |                                                                                      |                                                              |
 | Poison     | 2/19/25   | Yes        | Linux            |                                                                                      |                                                              |
 | Knife      | 2/20/25   | Yes        | Linux            | Burp Web Requests, Modifying existing exploits, breaking PHP, gtfobin                |                                                              |

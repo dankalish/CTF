@@ -2,7 +2,9 @@
 
 <details>
 <summary><strong>Summary</strong></summary>
-Windows machine that uses SQL injection and some XSS with the logins for access to the notes app. Escalate privileges from there using a root shell installed on the machine. Scan the machine and find a login page on port 80 that is running php version 7.2.7. Check for valid usernames using a fuzzing attack with the `wfuzz` tool and find `tyler`. Find that when a note is created, the website doesn't sanitize inputs and executes HTML directly. In the contactUs form, find that the command is run in powershell. Use this and the `Change Password` URL to change tyler's password. Once in Tyler's notes, find an smb share. Use that to gain initial access and a shell. Find bash installed on the machine and run it. Find the `.bash_history` file and find an administrator password. Exploit it to get root.
+Windows machine that uses SQL injection and some XSS with the logins for access to the notes app. Escalate privileges from there using a root shell installed on the machine.
+
+Scan the machine and find a login page on port 80 that is running php version 7.2.7. Check for valid usernames using a fuzzing attack with the `wfuzz` tool and find `tyler`. Find that when a note is created, the website doesn't sanitize inputs and executes HTML directly. In the contactUs form, find that the command is run in powershell. Use this and the `Change Password` URL to change tyler's password. Once in Tyler's notes, find an smb share. Use that to gain initial access and a shell. Find bash installed on the machine and run it. Find the `.bash_history` file and find an administrator password. Exploit it to get root.
 
 <summary><strong>What I Learned</strong></summary>
 <body>
