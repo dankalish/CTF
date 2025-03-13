@@ -1,6 +1,11 @@
 # Secnotes
 
-A Windows machine that uses \***\*\_\_\*\***
+### Summary
+
+<details>
+<summary>Spoiler Summary</summary>
+Windows machine that uses SQL injection and some XSS with the logins for access to the notes app. Escalate privileges from there using a root shell installed on the machine
+</details>
 
 ### Steps
 
@@ -91,5 +96,5 @@ Try `cd /root`
 find the `.bash_history` file which contains an admin user and password
 ![alt text](image-16.png)
 
-Get a root shell using
+Get a root shell using  
 `impacket-psexec administrator@<IP_ADDR>`
