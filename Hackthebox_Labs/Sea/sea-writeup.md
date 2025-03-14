@@ -18,7 +18,7 @@ Login to the remote machine on the browser using the proxy. Catch the request fr
 
 #### Not quite a Bordereau
 
-I had the commands and information saved before I started thinkgin about posting these on github. In the future there is more detail, but when I did this, it was more of a brain dump and less of a conscious effort to provide a detailed writeup.
+I had the commands and information saved before I started thinking about posting these on github. In the future there is more detail, but when I did this, it was more of a brain dump and less of a conscious effort to provide a detailed writeup.
 
 ## Steps
 
@@ -26,7 +26,7 @@ Scan the machine for open ports
 `nmap --open -p- -oA nmap/open <IP>`
 
 Use gobuster to find files on the webserver  
-`gobuster dir -u http://10.129.194.230:50000 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o jetty.txt`
+`gobuster dir -u http://10.129.194.230:50000 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
 
 Find a registration page on the machine
 
