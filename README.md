@@ -19,6 +19,6 @@ Practice writeups while preparing for the OSCP exam.
 | Chatterbox | 3/1/25    | Yes        | Windows          |                                                                                      |
 | Jeeves     | 3/4/25    | Yes        | Windows          |                                                                                      |
 | SecNotes   | 3/13/25   | Yes        | Windows          | SQLi, XSS, CSRF, Web Proxies/Requests, Breaking Auth                                 | [SecNotes Writeup 3/13](Lab-SecNotes/secnotes-writeup.md) |
-| Active     | TBD       | Yes        | Active Directory | Kerberoasting, SMB Enumeration, Windows Privilege escalation                         | [Active Writeup 3/17](Lab-Active/active-writeup.md)       |
+| Active     | 3/17/25   | Yes        | Active Directory | Kerberoasting, SMB Enumeration, Windows Privilege escalation                         | [Active Writeup 3/17](Lab-Active/active-writeup.md)       |
 
 Burp Web Requests, Modifying existing exploits, breaking PHP, gtfobin

