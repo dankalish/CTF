@@ -2,7 +2,7 @@
 
 CTF Writeups
 
-Practice writeups while preparing for the OSCP exam.
+Practice writeups while preparing for the OSCP exam and beyond
 
 ### HackTheBox Machines
 
@@ -20,6 +20,6 @@ Practice writeups while preparing for the OSCP exam.
 | Jeeves     | 3/4/25    | Yes        | Windows          |                                                                                      |
 | SecNotes   | 3/13/25   | Yes        | Windows          | SQLi, XSS, CSRF, Web Proxies/Requests, Breaking Auth                                 | [SecNotes Writeup 3/13](Windows/Lab-SecNotes/secnotes-writeup.md)   |
 | Active     | 3/17/25   | Yes        | Active Directory | Kerberoasting, SMB Enumeration, Windows Privilege escalation                         | [Active Writeup 3/17](ActiveDirectory/Lab-Active/active-writeup.md) |
-| Forest     | TBD       |            | Active Directory | TBD                                                                                  | [Forest Writeup WIP](ActiveDirectory/Lab-Forest/forest-writeup.md)  |
+| Forest     | TBD       |            | Active Directory | TBD                                                                                  | [Forest Writeup](ActiveDirectory/Lab-Forest/forest-writeup.md)      |
 
 Burp Web Requests, Modifying existing exploits, breaking PHP, gtfobin
