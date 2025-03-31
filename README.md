@@ -20,6 +20,7 @@ Practice writeups while preparing for the OSCP exam and beyond
 | Jeeves     | 3/4/25    | Yes        | Windows          |                                                                                      |
 | SecNotes   | 3/13/25   | Yes        | Windows          | SQLi, XSS, CSRF, Web Proxies/Requests, Breaking Auth                                 | [SecNotes Writeup 3/13](Windows/Lab-SecNotes/secnotes-writeup.md)   |
 | Active     | 3/17/25   | Yes        | Active Directory | Kerberoasting, SMB Enumeration, Windows Privilege escalation                         | [Active Writeup 3/17](ActiveDirectory/Lab-Active/active-writeup.md) |
-| Forest     | 3/25/25   | Yes        | Active Directory | Pass-the-hash, ldapsearch, secretsdump, bloodhound, sharphound                       | [Forest Writeup 3/26](ActiveDirectory/Lab-Forest/forest-writeup.md) |
+| Forest     | 3/25/25   | Yes        | Active Directory | Pass-The-Hash, ldapsearch, secretsdump, bloodhound, sharphound                       | [Forest Writeup 3/26](ActiveDirectory/Lab-Forest/forest-writeup.md) |
+| Sauna      | 3/31/25   | Yes        | Active Directory | Pass-The-Hash, VIM Scripting, ldapsearch, kerbrute, user enumeration                 | [Sauna Writeup 3/31](ActiveDirectory/Lab-Sauna/sauna-writeup.md)    |
 
 Burp Web Requests, Modifying existing exploits, breaking PHP, gtfobin
