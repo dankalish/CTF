@@ -84,7 +84,7 @@ Start bloodhound and upload the information to it. Mark Fsmith as owned and chec
 Find PSRemote exploit in the mapping.
 ![alt text](images/image-8.png)
 
-### WinPEaSS
+### WinPEAS
 
 Upload WinPEAS to the target machine and run it. Find a new user in the
 ![alt text](images/image-10.png)
