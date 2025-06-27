@@ -4,13 +4,14 @@ CTF Writeups
 
 Practice writeups while preparing for the OSCP exam and beyond
 
-### Proving Grounds Practice
+## Proving Grounds Practice
 
-| Name          | Date      | Machine Type | Learned          | Link           |
-| ------------- | --------- | ------------ | ---------------- | -------------- |
-| <b>Robust</b> | 4/25/2025 | Windows      | X-Forwarded-For, | link goes here |
+| Name          | Date      | Machine Type | Learned          | Link                                                  |
+| ------------- | --------- | ------------ | ---------------- | ----------------------------------------------------- |
+| <b>Robust</b> | 4/25/2025 | Windows      | X-Forwarded-For, | [Robust WIP](ProvingGroundsPractice/Robust/robust.md) |
+| <b>Wombo</b>  | 4/25/2025 | Windows      | X-Forwarded-For, | [Wombo WIP](ProvingGroundsPractice/Wombo/wombo.md)    |
 
-### HackTheBox Machines (First writeups, Learned a lot)
+## HackTheBox Machines (First writeups, Learned a lot)
 
 <p>
 June 20, 2025 - I'm a bit embarassed by how mediocre a lot of these writeups are, but I will leave them up to remind myself how far I've come
