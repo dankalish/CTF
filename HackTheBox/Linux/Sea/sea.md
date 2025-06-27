@@ -33,9 +33,11 @@ Get a reverse shell file onto the target machine using [CVE-2023-41425](https://
 
 ### Start a netcat listener and upload the corrupted CVE file using the exploit file
 
-Find where directory for the site configuration is in sites-enabled  
- • `DocumentRoot category in Directory`  
- • `/etc/passwd`
+Find where directory for the site configuration is in sites-enabled
+
+-
+- `DocumentRoot category in Directory`
+  - `/etc/passwd`
 
 Found BCRYPT hash in : `/var/www/sea/data`. Decrypt it using hashcat.  
 `$2y$10$iOrk210RQSAzNCx6Vyq2X.aJ\/D.GuE4jRIikYiWrD3TM\/PjDnXm4q : mychemicalromance`
@@ -69,29 +71,34 @@ Get the service command and check it
 Cannot access root/monitoring file, but can set up port forward and access it
 ![alt text](images/image-1.png)
 
-Setup an ssh listener locally on port 8081. Forward it from 8081 to 127.0.0.1 locally and direct it to 8080 on the other end (target machine)  
- • `ssh -L 8081:127.0.0.1:8080 amay@<RHOST>`
+Setup an ssh listener locally on port 8081. Forward it from 8081 to 127.0.0.1 locally and direct it to 8080 on the other end (target machine)
+
+- `ssh -L 8081:127.0.0.1:8080 amay@<RHOST>`
 
 Then you can access 127.0.0.1:8082 on browser with login
 
 Click the analyze button to get the logs. Send them to the Burp Repeater
 
-In the kali cli, curl the server to look for suspicious traffic  
- • `curl <IP>/random_text`
+In the kali cli, curl the server to look for suspicious traffic
 
-Check to see if you can inject php code into log file  
- • Set up a proxy and use it to try to run a command  
- ○ KALI -> `curl 10.129.62.179/contretemps -x http://localhost:8080`  
- • Intercept it with Burp, change to a more suspicious command agent
+- `curl <IP>/random_text`
+
+Check to see if you can inject php code into log file
+
+- Set up a proxy and use it to try to run a command
+- KALI -> `curl 10.129.62.179/contretemps -x http://localhost:8080`
+- Intercept it with Burp, change to a more suspicious command agent
 
 ![alt text](images/image-2.png)
 ![alt text](images/image-3.png)
 ![alt text](images/image-5.png)
 
-Try to get other files  
- • `/root/root.txt`  
- • `/etc/passwd`  
- • `/etc/shadow`
+Try to get other files
+
+- `/root/root.txt`
+
+- `/etc/passwd`
+  - `/etc/shadow`
 
 Try to run a command
 

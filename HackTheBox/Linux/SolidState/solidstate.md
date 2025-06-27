@@ -3,7 +3,7 @@
 ### What I Learned
 
 1. Always check running software based on the services running on the ports
-2. Gaining access to user's machines using basic credentials
+2. Gaining access to user's machines using basic credentials (root,root | admin,password)
 
 <details>
   <summary><strong>Writeup Summary</strong></summary>
@@ -34,7 +34,7 @@ Get a list of all open ports
 
 Now run a targeted scan
 
-• `nmap -p 11.,119,22,25,4555,80 -sC -sV -oA nmap/targeted --script vuln <IP_ADDR>`
+- `nmap -p 11.,119,22,25,4555,80 -sC -sV -oA nmap/targeted --script vuln <IP_ADDR>`
 
 While waiting, check the 4555 port
 
@@ -68,6 +68,7 @@ Find all commands accessible
 - None are in gtfobins
 
 Download other apache james RCE exploit that uses python3, set the variables, and run it.
-• `linux/remote/50347.py`
+
+- `linux/remote/50347.py`
 
 SSH into the machine as mindy to get a root shell
