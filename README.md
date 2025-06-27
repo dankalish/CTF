@@ -24,11 +24,11 @@ June 20, 2025 - I'm a bit embarassed by how mediocre a lot of these writeups are
 | <b>Poison</b>     | 2/19/25   | Linux            | 7zip file expanding, root server directory location                                   | [Poison Writeup](HacktheBox/Linux/Poison/poison.md)             |
 | <b>Knife</b>      | 2/20/25   | Linux            | Burp Web Requests, Modifying existing exploits, breaking PHP, gtfobins                | [Knife Writeup](Hackthebox/Linux/Knife/knife.md)                |
 | <b>Jerry</b>      | 2/21/25   | Windows          | Use hydra with default credentials, check for executable files in uploaded zip folder | [Jerry Writeup](HacktheBox/Windows/Jerry/jerry-writeup.md)      |
-| <b>Netmon</b>     | 2/24/25   | Windows          |                                                                                       |
+| <b>Netmon</b>     | 2/24/25   | Windows          | Nishang reverse shells, incrementing lazy passwords                                   | [Netmon Writeup](HacktheBox/Windows/Netmon/netmon.md)           |
 | <b>Mailing</b>    | 2/27/25   | Windows          |                                                                                       |
 | <b>Chatterbox</b> | 3/1/25    | Windows          |                                                                                       |
 | <b>Jeeves</b>     | 3/4/25    | Windows          |                                                                                       |
-| <b>SecNotes</b>   | 3/13/25   | Windows          | SQLi, XSS, CSRF, Web Proxies/Requests, Breaking Auth                                  | [SecNotes Writeup](Windows/Lab-SecNotes/secnotes-writeup.md)    |
+| <b>SecNotes</b>   | 3/13/25   | Windows          | SQLi, XSS, CSRF, Web Proxies/Requests, Breaking Auth                                  | [SecNotes Writeup](HackTheBox/Windows/SecNotes/secnotes.md)     |
 | <b>Active</b>     | 3/17/25   | Active Directory | Kerberoasting, SMB Enumeration, Windows Privilege escalation                          | [Active Writeup](ActiveDirectory/Lab-Active/active-writeup.md)  |
 | <b>Forest</b>     | 3/25/25   | Active Directory | Pass-The-Hash, ldapsearch, secretsdump, bloodhound, sharphound                        | [Forest Writeup](ActiveDirectory/Lab-Forest/forest-writeup.md)  |
 | <b>Sauna</b>      | 3/31/25   | Active Directory | Pass-The-Hash, VIM Scripting, ldapsearch, kerbrute, user enumeration                  | [Sauna Writeup](ActiveDirectory/Lab-Sauna/sauna-writeup.md)     |

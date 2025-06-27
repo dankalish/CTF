@@ -1,21 +1,21 @@
-# Secnotes
+# HackTheBox - Secnotes
 
-<details>
-<summary><strong>Summary</strong></summary>
-Windows machine that uses SQL injection and some XSS with the logins for access to the notes app. Escalate privileges from there using a root shell installed on the machine.
-
-Scan the machine and find a login page on port 80 that is running php version 7.2.7. Check for valid usernames using a fuzzing attack with the `wfuzz` tool and find `tyler`. Find that when a note is created, the website doesn't sanitize inputs and executes HTML directly. In the contactUs form, find that the command is run in powershell. Use this and the `Change Password` URL to change tyler's password. Once in Tyler's notes, find an smb share. Use that to gain initial access and a shell. Find bash installed on the machine and run it. Find the `.bash_history` file and find an administrator password. Exploit it to get root.
-
-<summary><strong>What I Learned</strong></summary>
-<body>
+### What I Learned
 
 1. Always check the desktop directory of the user you just compromised. In these machines, there is usually good information there. I missed it this time and had to go back an hour later.
 2. A bash shell running in windows can often get you root access to files that the inital user does not have access to.
 3. The SMB share goes both ways. You can use inital access to upload a file like netcat or a meterpreter shell.
-</body>
-</details>
 
-### Steps
+<details>
+  <summary><strong>Writeup Summary</strong></summary>
+Windows machine that uses SQL injection and some XSS with the logins for access to the notes app. Escalate privileges from there using a root shell installed on the machine.
+
+Scan the machine and find a login page on port 80 that is running php version 7.2.7. Check for valid usernames using a fuzzing attack with the `wfuzz` tool and find `tyler`. Find that when a note is created, the website doesn't sanitize inputs and executes HTML directly. In the contactUs form, find that the command is run in powershell. Use this and the `Change Password` URL to change tyler's password. Once in Tyler's notes, find an smb share. Use that to gain initial access and a shell. Find bash installed on the machine and run it. Find the `.bash_history` file and find an administrator password. Exploit it to get root.
+
+</details>
+<br>
+
+## Writeup
 
 Scan the machine for open ports
 `nmap --open -p- -oA nmap/open <IP>`
